@@ -1,0 +1,13 @@
+data = load("data.txt");
+label = load("label.txt");
+[D,N] = size(data);
+n_space = length(unique(label));
+r = 0; affine = false; outlier = false; rho = 1;
+re = zeros(4,1);
+alpha=40;
+[missrate,C,result,ARI,NMI] = SSC(data,r,affine,alpha,outlier,rho,label,n_space);
+R=silhouette(data',result);
+re(1,1)=ARI;
+re(2,1)=NMI;
+re(3,1)=missrate;
+re(4,1)=mean(R);
