@@ -1,5 +1,5 @@
 # SPARC_Project
-This project contains 1 main files and some sub-functions in 11 files. 
+This project contains 1 main function and some sub-functions. 
 
 Main.m: Input the dataset and set parameters, this function returns the clustering result and four clustering evaluation metrics.
 
